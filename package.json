@@ -1,0 +1,9 @@
+{
+	"name" : "authentication-service",
+	"version" : "0.0.1",
+	"description" : "Aurhtentication service for Cycling Fitness Application",
+	"dependencies" : {
+		"nats" : "^0.5.4"
+	}
+}
+
