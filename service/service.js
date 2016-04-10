@@ -35,6 +35,7 @@ if(obj.hasOwnProperty('sessionkey')){
 
 }else{
 	console.log("else called, username and password should be sent");
+	console.log(msg);
 	nc.request('user.confirm.auth', msg, function(response){
 		console.log("response form user.confirm.auth : " + response);
 		if(response==""){
