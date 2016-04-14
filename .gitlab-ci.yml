@@ -1,5 +1,5 @@
 test:
-  script: make build
+  script: make test
   only:
     - master
   allow_failure: false

@@ -1,0 +1,8 @@
+FROM node
+
+ADD service /service
+ADD package.json /package.json
+RUN npm install
+
+WORKDIR /test
+RUN ..node_modules/mocah/bin/_mocha
