@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: authentication
+  name: authentication
+spec:
+  replicas: 1
+  selector:
+    name: authentication
+  template:
+    metadata:
+      labels:
+        name: authentication
+      name: authentication
+    spec:
+      containers:
+        - image: laurafitz/authentication:latest
+          name: authentication
+          env:
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+
